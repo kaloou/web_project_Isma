@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+   <title>IshBet</title>
+
+   <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/Logo-Ishbet.jpg">
+
+   <link rel="icon" type="image/png" sizes="16x16" href="IMAGES/Logo-Ishbet.jpg">
+
+<link rel="stylesheet" href="C:\Users\lewat\Desktop\Hafid_Benchougra_Ismail_Projet_Q1\CSS\pfe.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+<link rel="stylesheet" href="boxicons.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <script src="js/slider.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+
+    <script src="js/hamburger.js" defer></script>
+    
+    <script src="js/main.js" defer></script>
+
+    <script src="js/login.js" defer></script>
+
+    <script src="js/toast.js" defer></script>
+
+    <script src="js/scroll-vers-le-haut.js" defer></script>
+
+</head>
+
+<body>
+
+  <div id="progress">
+    <span id="progress-value">&#129033;</span>
+  </div>
+
+        <header>
+
+          <a href="pfe-mais-html.html" class="logo"><img src="IMAGES/logogo.jpg" class="img-logo"></a>
+
+          <ul class="navbar">
+
+            <li><a href="pfe-mais-html.html" class="active">Accueil</a></li>   
+            <li><a href="about-us.html">À propos de nous</a></li>   
+            <li><a href="Services.html">Services</a></li>      
+            <li><a href="contact.html">Contact</a></li>            
+          </ul>
+
+            <div class="main">
+              <button class="button" id="form-open">Se connecter</button>
+              
+                <div class="menu-icon"><i class="bx bx-menu"></i></div>
+
+            </div>
+
+        </header>
+
+<section class="home">
+  <div class="entete-img">
+
+    <p>Paris Sportifs</p>
+
+    <h1>I S H B E T</h1>
+
+    <p>Boostez votre expérience de pari avec Ishbet, où les gagnants se forgent !</p>
+
+</div>
+
+  <div class="form_container">
+
+    <i class="uil uil-times form_close"></i>
+
+    <div class="form login_form">
+      <form action="#" method="post">
+        <h2>Se connecter</h2>
+
+        <div class="input_box">
+          <input type="email" name="mail" placeholder="Entrez votre email" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" name="pass1" placeholder="Entrez le mot de passe" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+
+        <input name="login" type="submit" class="button" value="Se connecter maintenant"></input>
+
+        <div class="login_signup">Vous n'avez pas de compte? <a href="#" id="signup">S'enregistrer</a></div>
+      </form>
+    </div>
+    
+    <div class="form signup_form">
+      <form action="#" method="post">
+        <h2>S'enregistrer</h2>
+
+        <div class="input_box">
+          <input type="email" name="mail" placeholder="Entrez votre mail" required  />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+
+        <div class="input_box">
+          <input type="password" name="pass1" placeholder="Créer un mot de passe" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+
+        <div class="input_box">
+          <input type="password" name="pass2" placeholder="Confirmez le mot de passe" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+
+        <div class="input_box">
+          <input type="nom" name="name" placeholder="Nom" required />
+          <i class="uil uil-user"></i>
+          
+        </div>
+
+        <div class="input_box">
+        <i class="uil uil-phone"></i>
+          <input type="telNo" name="tel" placeholder="Numéro de télèphone" minlength="1" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required />
+         
+        </div>
+
+        <input  name="signup" type="submit" class="button" value="S'enregistrer"></input>
+
+        <div class="login_signup">Vous avez déjà un compte? <a href="#" id="login">Se connecter</a></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <div class="container">
+
+        <section class="featured-events">
+
+            <h2 id="featured-events">Événements en vedette</h2>
+
+            <div class="featured-events-container">
+
+                <div class="event football">
+
+                    <img src="C:\Users\lewat\Desktop\Hafid_Benchougra_Ismail_Projet_Q1\IMAGES\chelsea-manuuu.jpg" alt="Football">
+
+                    <h3> Manchester United vs Chelsea</h3>
+
+                    <p>Samedi 20 Janvier</p>
+
+                </div>
+
+                <div class="event basketball">
+
+                    <img src="/IMAGES/lakers-warriorss.jpg" alt="Basketball">
+                    
+                    <h3> Golden State Warriors vs Los Angeles Lakers</h3>
+
+                    <p>Dimanche 21 Janvier</p>
+
+                </div>
+
+                <div class="event hockey">
+
+                    <img src="/IMAGES/toronto-monreall.jpg" alt="Hockey">
+
+                    <h3> Montreal Canadiens vs Toronto Maple Leafs</h3>
+
+                    <p>Lundi 22 Janvier</p>
+                
+                  </div>
+            
+            </div>
+
+        </section>
+        
+        <section class="upcoming-events">
+
+            <h2 id="upcoming-events">Événements à venir</h2>
+
+            <div class="upcoming-events-container">
+
+                <div class="event-category">
+
+                    <h3>Football</h3>
+
+                    <ul>
+                        <li>Manchester United vs Chelsea <p class="date"><br> Samedi 20 Janvier</p></li>
+                        <br>
+                        <li>Real Madrid vs Barcelone <p class="date"><br>Dimanche 21 Janvier</p></li>
+                        <br>
+                        <li>Bayern Munich vs Borussia Dortmund  <p class="date"><br>Lundi 22 Janvier</p></li>
+
+                    </ul>
+                
+                </div>
+
+                <div class="event-category">
+
+                    <h3>Basketball</h3>
+                    
+                    <ul>
+                        <li>Golden State Warriors vs Los Angeles Lakers <p class="date"><br> Dimanche 21 Janvier</p></li>
+                        <br>
+                        <li>Boston Celtics vs Philadelphia 76ers <p class="date"><br> Lundi 22 Janvier</p></li>
+                        <br>
+                        <li>Houston Rockets contre Oklahoma City Thunder <p class="date"><br> Mardi 23 Janvier</p></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="event-category">
+
+                    <h3>Hockey</h3>
+                    
+                    <ul>
+                        <li>Canadiens de Montréal vs Maple Leafs de Toronto <p class="date"><br> Lundi 22 Janvier</p></li>
+                        <br>
+                        <li>Penguins de Pittsburgh vs Capitals de Washington <p class="date"><br> Mardi 23 Janvier</p></li>
+                        <br>
+                        <li>Chicago Blackhawks contre St. Louis Blues <p class="date"><br> Mercredi 24 Janvier</p></li>
+
+                    </ul>
+                
+                  </div>
+
+            </div>
+
+          </section>
+        
+
+        <section class="betting-form">
+
+            <h2 id="betting-form">Placer un pari</h2>
+         
+              <label for="amount">Entrez le montant de votre pari : </label>
+
+              <input type="text" id="amount" name="amount" class="form-control" placeholder="1€  jusqu'à  999 999€" minlength="1" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>    €
+
+              <br>
+
+              <label for="event">Sélectionnez l'événement : </label>
+
+                <select id="event" name="event" class="form-control">
+
+                    <option value="football">Football: Manchester United vs Chelsea</option>
+
+                    <option value="basketball">Basketball: Golden State Warriors vs Los Angeles Lakers</option>
+                    
+                    <option value="hockey">Hockey: Montreal Canadiens vs Toronto Maple Leafs</option>
+               
+                  </select>
+
+        <button type="submit" class="btn btn-primary" onclick="myFunction()">Placer un pari</button>
+
+        <div id="snackbar">Félicitations ! Votre pari a été enregistré avec succès. Que la chance soit avec vous !</div>
+        </section>
+
+    </div>
+
+<center><h2>Événement Matchday Live</h2></center>
+
+<div class="wrapper">
+  
+    <i id="left" class="fa-solid fa-angle-left"></i>
+
+    <ul class="carousel">
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/aston-brighton.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Aston Villa vs Brighton</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+      <li class="card">
+
+        <div class="img" ><img src="IMAGES/boune-ever.jpg" alt="img" draggable="false" ></div>
+        <h3><a href="Aston-Brighton.html">Bournemouth vs Everton</a></h3>
+        <span>Dimanche 28 Mai</span>
+      
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/utd-fulham.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Manchester United vs Fulham</a></h3>
+        <span>Dimanche 28 Mai</span>
+      
+      </li>
+      
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/brent-city.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Brentford vs Manchester City</a></h3>
+        <span>Dimanche 28 Mai</span>
+      
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/chelsea-newcastle.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Chelsea vs Newcastle</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/west-leicester.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">West Ham vs Leicester</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/wolves-arsenal.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Wolves vs Arsenal</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/south-liverpool.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Southampton vs Liverpool</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+      <li class="card">
+
+        <div class="img"><img src="IMAGES/nott-crys.jpg" alt="img" draggable="false"></div>
+        <h3><a href="Aston-Brighton.html">Nottingham Forest vs Crystal Palace</a></h3>
+        <span>Dimanche 28 Mai</span>
+
+      </li>
+
+    </ul>
+
+    <i id="right" class="fa-solid fa-angle-right"></i>
+
+  </div>
+
+<center><h2 id="video">Video de présentation</h2></center>
+
+<div class="video">
+
+    <iframe src="https://www.youtube.com/embed/c_cqtDtbjOw" frameborder="0"
+
+    allowfullscreen width="1300" height="700" 
+
+    allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-inpicture">
+
+    </iframe>
+    
+</div>
+
+<center><h2 id="emballage">Avis</h2></center>
+
+<div class="emballage">
+  <div class="boite">
+    <i class="fas fa-quote-left quote"></i>
+    <p>Je suis très impressionné par <b>Ishbet</b>. 
+      C'est une expérience 5 étoiles définitive. La variété des sports et 
+      des marchés est exceptionnelle, les cotes sont compétitives et l'interface 
+      utilisateur est élégante et intuitive. Leur support client est réactif et utile,
+       assurant un parcours de pari fluide.</p>
+    <div class="content">
+      <div class="info">
+        <div class="name">Sandy</div>
+        <div class="job">Écureuil | Animal</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="image">
+        <img src="IMAGES/squirrel (2).jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="boite">
+    <i class="fas fa-quote-left quote"></i>
+    <p>J'utilise <b>Ishbet</b> depuis un moment maintenant, et 
+      je peux affirmer avec confiance qu'il mérite une note de 5 étoiles. 
+      La plate-forme propose une vaste gamme de sports et de marchés parmi 
+      lesquels choisir, avec des cotes compétitives qui m'ont toujours fourni 
+      une grande valeur.</p>
+    <div class="content">
+      <div class="info">
+        <div class="name">Paludetto Lucas</div>
+        <div class="job">Élève | Web codeur</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="image">
+        <img src="IMAGES/lucas (2).jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="boite">
+    <i class="fas fa-quote-left  quote"></i>
+    <p><b>Ishbet</b> a dépassé mes attentes dans tous les aspects.
+            La gamme de sports et de marchés est
+            impressionnante, les cotes sont toujours favorables et leur plate-forme
+            conviviale facilite les paris. Le service client est exceptionnel,
+            fournissant une assistance rapide et utile en cas de besoin. 
+          </p>
+    <div class="content">
+      <div class="info">
+        <div class="name">Brousmiche Thomas</div>
+        <div class="job">Soldat | Paracommando</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="image">
+        <img src="IMAGES/thomas.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+      <footer>
+        <div class="contenu">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">À propos de nous</div>
+              <p>Notre société est l'un des principaux fournisseurs de 
+                services de paris en ligne. Nous vous offrons une large gamme 
+                d'événements et des cotes compétitives pour nos clients.</p>
+            </p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contactez-nous</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone"></i>+32 0400 00 00</a>
+              </div>
+              <br>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>info@ishbet.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Nos Services</div>
+            <div><a href="#featured-events">Événements en vedette</a></div>
+            <div><a href="#upcoming-events">Événements à venir</a></div>
+            <div><a href="#betting-form">Placer un pari</a></div>
+            <div><a href="#video">Video présentation</a></div>
+            <div><a href="#emballage">Avis</a></div> 
+          </div>
+          <div class="right box">
+            <div class="topic">Abonnez-vous</div>
+            <form action="#">
+              <input type="text" placeholder="Entrez votre addresse mail">
+              <input type="submit" name="" value="Envoyer">
+              <div class="media-icons">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright &#169; 2023 <a href="#"><b>Ishbet</b></a>All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

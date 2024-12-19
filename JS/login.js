@@ -13,7 +13,6 @@ formOpenBtn.addEventListener("click", () => home.classList.add("show"));
 // Événement pour fermer le formulaire
 formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
 
-
 // Boucle sur les icônes pour afficher/masquer le mot de passe
 pwShowHide.forEach((icon) => {
   icon.addEventListener("click", () => {
@@ -27,7 +26,6 @@ pwShowHide.forEach((icon) => {
     }
   });
 });
-
 
 // Événement pour activer le formulaire d'inscription
 signupBtn.addEventListener("click", (e) => {

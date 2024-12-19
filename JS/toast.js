@@ -4,7 +4,7 @@ function myFunction() {
   // Ajoute la classe "show" à l'élément
   x.className = "show";
   // Définit un délai de 3000 millisecondes (3 secondes)
-  setTimeout(function() {
+  setTimeout(function () {
     // Remplace la classe "show" par une chaîne vide pour masquer l'élément
     x.className = x.className.replace("show", "");
   }, 3000);

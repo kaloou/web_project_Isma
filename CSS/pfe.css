@@ -1618,17 +1618,3 @@ h2.title {
     width: 100%;
   }
 }
-
-.home .aston-brighton {
-  width: 100%;
-  background-image: url(img/aston-brighton.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 80px;
-  position: relative;
-  height: 60vh;
-  margin-bottom: 3%;
-}

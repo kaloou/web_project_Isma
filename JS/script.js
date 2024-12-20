@@ -1,14 +1,11 @@
 // ===================== TOGGLE SECTIONS =====================
 
-// Sélection des éléments avec les classes 'toggle', 'teneur' et 'icon'
 let toggles = document.getElementsByClassName("toggle");
 let contentDiv = document.getElementsByClassName("teneur");
 let icons = document.getElementsByClassName("icon");
 
-// Ajout des écouteurs d'événements pour les éléments 'toggle'
 for (let i = 0; i < toggles.length; i++) {
   toggles[i].addEventListener("click", () => {
-    // Basculer l'affichage du contenu
     if (parseInt(contentDiv[i].style.height) !== contentDiv[i].scrollHeight) {
       contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
       toggles[i].style.color = "#3c6e71";
@@ -19,7 +16,6 @@ for (let i = 0; i < toggles.length; i++) {
       icons[i].classList.replace("fa-minus", "fa-plus");
     }
 
-    // Fermer les autres éléments
     for (let j = 0; j < contentDiv.length; j++) {
       if (j !== i) {
         contentDiv[j].style.height = "0px";
@@ -113,44 +109,6 @@ $(document).ready(() => {
   });
 });
 
-// ===================== FORM TOGGLE =====================
-
-const formOpenBtn = document.querySelector("#form-open");
-const home = document.querySelector(".home");
-const formContainer = document.querySelector(".form_container");
-const formCloseBtn = document.querySelector(".form_close");
-const signupBtn = document.querySelector("#signup");
-const loginBtn = document.querySelector("#login");
-const pwShowHide = document.querySelectorAll(".pw_hide");
-
-// Ouvrir le formulaire
-formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-
-// Fermer le formulaire
-formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
-
-// Afficher/masquer le mot de passe
-pwShowHide.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    let getPwInput = icon.parentElement.querySelector("input");
-    getPwInput.type = getPwInput.type === "password" ? "text" : "password";
-    icon.classList.toggle("uil-eye");
-    icon.classList.toggle("uil-eye-slash");
-  });
-});
-
-// Activer le formulaire d'inscription
-signupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.add("active");
-});
-
-// Activer le formulaire de connexion
-loginBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.remove("active");
-});
-
 // ===================== HAMBURGER MENU =====================
 
 const menuHamburger = document.querySelector(".menu-hamburger");
@@ -159,3 +117,90 @@ const navLinks = document.querySelector(".nav-links");
 menuHamburger.addEventListener("click", () => {
   navLinks.classList.toggle("mobile-menu");
 });
+
+// ===================== CAROUSEL HANDLING =====================
+
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+
+let isDragging = false,
+  isAutoPlay = true,
+  startX,
+  startScrollLeft,
+  timeoutId;
+
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insère des copies des dernières cartes au début pour un défilement infini
+carouselChildrens
+  .slice(-cardPerView)
+  .reverse()
+  .forEach((card) => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+  });
+
+// Insère des copies des premières cartes à la fin pour un défilement infini
+carouselChildrens.slice(0, cardPerView).forEach((card) => {
+  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+arrowBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+  });
+});
+
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragging) return;
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+};
+
+const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+};
+
+const infiniteScroll = () => {
+  if (carousel.scrollLeft === 0) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  } else if (
+    Math.ceil(carousel.scrollLeft) ===
+    carousel.scrollWidth - carousel.offsetWidth
+  ) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  }
+
+  clearTimeout(timeoutId);
+  if (!wrapper.matches(":hover")) autoPlay();
+};
+
+const autoPlay = () => {
+  if (window.innerWidth < 800 || !isAutoPlay) return;
+  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
+};
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
